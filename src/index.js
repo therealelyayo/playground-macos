@@ -4,10 +4,14 @@ import "./styles/index.css";
 import "./styles/index.tailwind.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import ReactGA from "react-ga";
 
 import Desktop from "./pages/Desktop";
 import Login from "./pages/Login";
 import Boot from "./pages/Boot";
+import keys from "./configs/keys";
+
+ReactGA.initialize(keys.ga);
 
 export default function App() {
   const [login, setLogin] = useState(false);
